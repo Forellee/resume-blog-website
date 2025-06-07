@@ -1,0 +1,154 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f7f7f7;
+  color: #1c1c1e;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Хедер с именем и фото */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000;
+  align-self: center;
+}
+
+/* Фото и возраст */
+.photo-wrapper {
+  position: relative;
+  width: 150px;
+}
+
+.photo {
+  width: 300px;
+  border-radius: 100px;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.age {
+    width: 100px;
+    position: absolute;
+    bottom: -20px;
+    left: 100%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 6px 18px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Секции */
+.about, .portfolio {
+  margin-bottom: 40px;
+}
+
+.about h2, .portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #111;
+  border-left: 5px solid #858585;
+  padding-left: 12px;
+}
+
+/* Карточки проектов */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  flex: 1 1 250px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Цвета брендов */
+.github {
+  background-color: #333;
+}
+
+.github:hover {
+  background-color: #24292e;
+}
+
+.telegram {
+  background-color: #0088cc;
+}
+
+.telegram:hover {
+  background-color: #0077b6;
+}
+
+.vk {
+  background-color: #4c75a3;
+}
+
+.vk:hover {
+  background-color: #3b5d84;
+}
