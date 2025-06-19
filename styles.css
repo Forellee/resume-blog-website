@@ -95,6 +95,20 @@ body {
 }
 
 /* Карточки проектов */
+.portfolio {
+  background-color: #1c1c1e; /* Темно-серый / почти черный фон */
+  color: #f7f7f7;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-top: 90px;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
 .cards {
   display: flex;
   gap: 20px;
@@ -104,7 +118,7 @@ body {
 
 .card-link {
   flex: 1 1 0; /* растягиваем карточки равномерно */
-  background: white;
+  background-color: #2c2c2e;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
