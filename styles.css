@@ -71,43 +71,60 @@ body {
 
 
 /* Секции */
-.about, .portfolio {
-  margin-bottom: 40px;
+.about {
+  max-width: 700px;       /* ограничиваем ширину для комфортного чтения */
+  padding: 20px;          /* внутренние отступы */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;            /* тёмный, но не чёрный цвет для текста */
+  background-color: #f9f9f9; /* лёгкий фон для контраста */
+  border-radius: 8px;     /* скруглённые углы */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* лёгкая тень */
+  line-height: 1.6;       /* расстояние между строками */
+  margin-bottom: 90px;
 }
 
-.about h2, .portfolio h2 {
+.about h2 {
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   color: #111;
-  border-left: 5px solid #858585;
-  padding-left: 12px;
+}
+
+.about p {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
 }
 
 /* Карточки проектов */
 .cards {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* чтобы карточки были в одну строку */
 }
 
-.card {
+.card-link {
+  flex: 1 1 0; /* растягиваем карточки равномерно */
   background: white;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  flex: 1 1 250px;
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+  min-width: 0; /* важно, чтобы flex правильно работал */
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  font-weight: 700;
-  color: #000000;
+.card-link:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.card p {
-  font-size: 1rem;
-  color: #333;
+.card-link img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: block;
 }
+
+
 
 .social-links {
   
