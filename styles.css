@@ -213,11 +213,42 @@ body {
   color: #1c1c1e;
 }
 
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 24px;
-  justify-items: center;
+.tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  overflow-x: visible;
+
+}
+
+.tech-row::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.tech-card {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.tech-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tech-card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
 }
 
 .tooltip {
@@ -231,7 +262,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   font-size: 0.85rem;
-  max-width: 180px;
+  width: 250px;
   text-align: center;
   opacity: 0;
   pointer-events: none;
@@ -245,27 +276,6 @@ body {
   transform: translate(-50%, -10px);
 }
 
-.tech-card {
-  position: relative;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-.tech-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-.tech-card img {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 12px;
-}
 
 @media (max-width: 768px) {
   .header {

@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>forellee_dev</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
     <div class="container">
         <header class="header">
             <div class="name">Максим Манохов</div>
             <div class="social-links">
-                <a href="https://github.com/forellee"  class="btn github" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" 
-                        alt="GitHub" style="filter: invert(1);">
+                <a href="https://github.com/forellee" class="btn github" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"
+                        style="filter: invert(1);">
                     GitHub
                 </a>
-                <a href="https://gitverse.ru/forellee"  class="btn gitverse" target="_blank">
-                    <img src="https://parsers.vc/logo/c4f1c653-eb3b-4b7c-a333-fa2f15faff3c-3.png" 
-                        alt="GitVerse">
+                <a href="https://gitverse.ru/forellee" class="btn gitverse" target="_blank">
+                    <img src="https://parsers.vc/logo/c4f1c653-eb3b-4b7c-a333-fa2f15faff3c-3.png" alt="GitVerse">
                     GitVerse
                 </a>
-                <a href="https://t.me/forellee"  class="btn telegram" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" 
-                        alt="Telegram" style="filter: invert(1);"> Telegram
+                <a href="https://t.me/forellee" class="btn telegram" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram"
+                        style="filter: invert(1);"> Telegram
                 </a>
-                <a href="https://vk.com/forelllee"  class="btn vk" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vk.svg" 
-                        alt="VK" style="filter: invert(1);"> VK
+                <a href="https://vk.com/forelllee" class="btn vk" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vk.svg" alt="VK"
+                        style="filter: invert(1);"> VK
                 </a>
             </div>
             <div class="photo-wrapper">
-                <img src="https://avatars.githubusercontent.com/u/104067792?v=4"
-                    alt="my_avatar" class="photo" />
+                <img src="https://avatars.githubusercontent.com/u/104067792?v=4" alt="my_avatar" class="photo" />
                 <div class="age">21 год</div>
             </div>
         </header>
         <section class="about">
             <h2>Обо мне</h2>
             <h3>Привет!</h3>
-            <p>Меня зовут Максим, я обучаюсь на Fullstack-разработчика и увлечён созданием современных веб-приложений.</p>
-            <p>В 2024 году я успешно окончил Колледж Московского Транспорта по специальности «Информационные системы и программирование». Сейчас активно развиваю навыки в Python, JavaScript и фреймворках, реализую собственные проекты и стремлюсь к профессиональному росту в IT.</p>
-            <p>Моя цель — создавать качественные и удобные решения, которые помогают людям и бизнесу. Я открыт к новым знаниям, вызовам и сотрудничеству.</p>
+            <p>Меня зовут Максим, я обучаюсь на Fullstack-разработчика и увлечён созданием современных веб-приложений.
+            </p>
+            <p>В 2024 году я успешно окончил Колледж Московского Транспорта по специальности «Информационные системы и
+                программирование». Сейчас активно развиваю навыки в Python, JavaScript и фреймворках, реализую
+                собственные проекты и стремлюсь к профессиональному росту в IT.</p>
+            <p>Моя цель — создавать качественные и удобные решения, которые помогают людям и бизнесу. Я открыт к новым
+                знаниям, вызовам и сотрудничеству.</p>
         </section>
     </div>
 
@@ -64,21 +68,52 @@
 
     <section class="stack-section">
         <h2>Мой стек</h2>
-        <div class="tech-grid">
+        <div class="tech-row">
+            <div class="tech-card" onclick="toggleTooltip('python-tooltip')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                <div>Python</div>
+                <div class="tooltip" id="python-tooltip">
+                    Создан Гвидо ван Россумом в 1991 году. Популярен в бэкенде, автоматизации, анализе данных и машинном
+                    обучении.
+                </div>
+            </div>
+
+            <div class="tech-card" onclick="toggleTooltip('django-tooltip')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+                <div>Django</div>
+                <div class="tooltip" id="django-tooltip">
+                    Мощный Python-фреймворк для разработки веб-приложений. Используется для создания масштабируемых
+                    backend-решений с минимальными усилиями.
+                </div>
+            </div>
+
             <div class="tech-card" onclick="toggleTooltip('js-tooltip')">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                     alt="JavaScript">
                 <div>JavaScript</div>
                 <div class="tooltip" id="js-tooltip">
-                    Создан в 1995 году Брэнданом Айком. Используется для интерфейсов, обработки событий, API и многого другого.
+                    Создан в 1995 году Брэнданом Айком. Используется для интерфейсов, обработки событий, API и многого
+                    другого.
                 </div>
             </div>
-            <div class="tech-card" onclick="toggleTooltip('python-tooltip')">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                    alt="Python">
-                <div>Python</div>
-                <div class="tooltip" id="python-tooltip">
-                    Создан Гвидо ван Россумом в 1991 году. Популярен в бэкенде, автоматизации, анализе данных и машинном обучении.
+
+
+
+            <div class="tech-card" onclick="toggleTooltip('html-tooltip')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                <div>HTML5</div>
+                <div class="tooltip" id="html-tooltip">
+                    Основной язык разметки веб-страниц. Современный стандарт, поддерживающий мультимедиа и семантические
+                    элементы.
+                </div>
+            </div>
+
+            <div class="tech-card" onclick="toggleTooltip('css-tooltip')">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                <div>CSS3</div>
+                <div class="tooltip" id="css-tooltip">
+                    Язык описания внешнего вида документов. С его помощью создаются адаптивные и анимированные
+                    интерфейсы.
                 </div>
             </div>
         </div>
@@ -86,4 +121,5 @@
 
     <script src="scripts.js"></script>
 </body>
+
 </html>
