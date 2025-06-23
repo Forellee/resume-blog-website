@@ -92,6 +92,109 @@ body {
   font-size: 1.1rem;
 }
 
+.education {
+  position: relative;
+  margin: 120px auto;
+  padding: 80px 40px 100px; /* Под волну */
+  background: linear-gradient(145deg, #0f0f10, #1a1a1f);
+  color: white;
+  overflow: hidden;
+}
+
+/* === Заголовок с неоновым разделителем === */
+.education h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.education h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #00ccff, transparent);
+  margin: 10px auto;
+}
+
+.education h4 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-ind
+}
+
+/* === Анимированные карточки === */
+.education-item {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  border-left: 3px solid #00ccff;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.2);
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  position: relative;
+  transform: translateX(calc(var(--offset, 0) * 1px));
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+.education-item h3 {
+  color: #00ccff;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.education-item p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* === Анимация плавания === */
+@keyframes float {
+  0% {
+    --offset: -10;
+    transform: translateX(-10px) scale(1);
+  }
+  50% {
+    --offset: 0;
+    transform: translateX(0px) scale(1.01);
+  }
+  100% {
+    --offset: 10;
+    transform: translateX(10px) scale(1);
+  }
+}
+
+/* === Волна сверху (зигзаг) === */
+.education::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 100%;
+  height: 60px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,90 L60,70 L120,90 L180,70 L240,90 L300,70 L360,90 L420,70 L480,90 L540,70 L600,90 L660,70 L720,90 L780,70 L840,90 L900,70 L960,90 L1020,70 L1080,90 L1140,70 L1200,90 L1200,0 L0,0 Z" fill="%23f7f7f7"></path></svg>') repeat-x;
+  background-size: cover;
+  z-index:
+}
+
+.education::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,32L60,48C120,64,240,96,360,104C480,112,600,96,720,85.3C840,75,960,75,1080,80C1200,85,1320,96,1380,101.3L1440,107L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z" fill="%23f7f7f7"></path></svg>');
+  background-size: cover;
+  background-repeat: repeat-x;
+  z-index: 10;
+}
+
 /* Карточки проектов */
 .portfolio {
   background-color: #1c1c1e;
