@@ -203,7 +203,7 @@ body {
   z-index: 2;
 }
 
-.achievements em {
+.achievements a {
   color: inherit;
   font-size: 0.9rem;
   text-decoration-style: dotted;
