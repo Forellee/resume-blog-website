@@ -47,3 +47,30 @@ document.addEventListener('click', function(e) {
     });
   }
 });
+
+// Изменение возраста
+
+function calculateAge(birthDate) {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let age = today.getFullYear() - birth.getFullYear();
+    const hasBirthdayPassed =
+      today.getMonth() > birth.getMonth() ||
+      (today.getMonth() === birth.getMonth() && today.getDate() >= birth.getDate());
+
+    if (!hasBirthdayPassed) {
+      age--;
+    }
+    return age;
+  }
+
+  const birthDate = "2003-12-09";
+
+  document.getElementById("age").textContent = `${calculateAge(birthDate)} год${getAgeEnding(calculateAge(birthDate))}`;
+
+  // Функция для корректного окончания (год / года / лет)
+  function getAgeEnding(age) {
+    if (age % 10 === 1 && age % 100 !== 11) return '';
+    if ([2, 3, 4].includes(age % 10) && ![12, 13, 14].includes(age % 100)) return 'а';
+    return '';
+  }
