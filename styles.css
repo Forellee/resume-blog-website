@@ -124,7 +124,7 @@ body {
   text-align: center;
   margin-bottom: 40px;
   position: relative;
-  z-ind
+  z-index: 2;
 }
 
 /* === Анимированные карточки === */
@@ -179,7 +179,7 @@ body {
   height: 60px;
   background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,90 L60,70 L120,90 L180,70 L240,90 L300,70 L360,90 L420,70 L480,90 L540,70 L600,90 L660,70 L720,90 L780,70 L840,90 L900,70 L960,90 L1020,70 L1080,90 L1140,70 L1200,90 L1200,0 L0,0 Z" fill="%23f7f7f7"></path></svg>') repeat-x;
   background-size: cover;
-  z-index:
+  z-index: 2;
 }
 
 .education::after {
@@ -193,6 +193,70 @@ body {
   background-size: cover;
   background-repeat: repeat-x;
   z-index: 10;
+}
+
+.achievements h4 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.achievements em {
+  color: inherit;
+  font-size: 0.9rem;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--text-tertiary);
+  transition: color 0.3s ease;
+}
+
+.achievements a {
+  font-size: 0.9rem;
+}
+
+.achievements em a:hover {
+  color: #1e90ff;
+}
+
+
+.achievements em a::after {
+    content: "↗";
+    display: inline-block;
+    margin-left: 2px;
+    transform: translateY(-1px);
+}
+
+.achievements-item {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  /*margin-left: 20px; */
+  padding: 20px;
+  border-left: 1px solid #000000;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  backdrop-filter: blur(5px);
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  position: relative;
+}
+
+.achievements-item img {
+  position: absolute;
+  margin-left: 70%;
+  bottom: 10px;
+  width: 8%;
+}
+
+.achievements-item h3 {
+  color: #000000e5;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.achievements-item p {
+  font-size: 0.9rem;
+  color: #000000;
 }
 
 /* Карточки проектов */
@@ -443,6 +507,11 @@ body {
 
   .card-link {
     width: 100%;
+  }
+
+  .achievements-item img {
+    margin-left: 50%;
+    width: 11%;
   }
 
   .portfolio {
